@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <title>Dates Object(5)</title>
+
+        <script>
+
+        function ShowDate()
+        {
+          var d = new Date();
+          var yy = d.getFullYear();
+        　var mm = d.getMonth();
+        　var dd = d.getDate();　
+          var h = d.getHours();
+        　var m = d.getMinutes();
+        　var s = d.getSeconds();　
+
+          var days = ["Sun.","Mon.","Tue.","Wed.","Thu.","Fri.","Sat."];
+
+        　document.getElementById("showbox1").innerHTML = d;
+        　document.getElementById("showbox2").innerHTML = yy + "/" + mm + "/" + dd + "   =>  " + days[d.getDay()];
+        　document.getElementById("showbox3").innerHTML = "Now is " + h + ' Hours ' + m + ' Minutes ' + s + ' Seconds';
+          document.getElementById("showbox4").innerHTML = d.getTime();
+
+        　setTimeout("ShowDate()",1000);
+        }
+        </script>
+
+</head>
+
+    <body onload="ShowDate()">
+        Show current date and time ! <br>
+        <p id="showbox1"></p>
+        <p id="showbox2"></p>
+        <p id="showbox3"></p>
+        <p id="showbox4"></p>
+
+    </body>
+</html>
